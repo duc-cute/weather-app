@@ -174,9 +174,9 @@ body {
 .tools .icon-notify {
     margin-left: 24px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #f7812df2;
     border-radius: 50%;
-    color: #666;
+    color: #f7812df2;
 }
 /* Status */
 .content__info-day {

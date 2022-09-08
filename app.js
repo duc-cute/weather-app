@@ -146,13 +146,14 @@ const app= {
                     }
                     inputSun()
                     this.dayForecast(dayForecastData);
+
                     //Chart
-                    
                     const list1=[]
                     const list2=[]
                     for(var i=5;i<=11;i+=2) {
                         var temp=Math.round(dayForecastData.list[i].main.temp - 272.15)
                         list1.push(temp)
+                        console.log(dayForecastData.list[i].dt_txt);
                     }
                     for(var i=3;i<=11;i+=2) {
                         var temp=Math.round(dayForecastData.list[i].main.temp - 272.15)
