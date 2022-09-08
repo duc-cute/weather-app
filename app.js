@@ -207,17 +207,17 @@ const app= {
                                 },
                             },
                             layout: {
-                                padding: {
-                                    right: 80,
-                                    bottom:80
-                                }
+                                // padding: {
+                                //     right: 80,
+                                //     bottom:80
+                                // }
                             }
                         }
                     }
                     Chart.defaults.color='#333'
                     Chart.defaults.borderColor='#fff'
                     Chart.defaults.font.family='Arial'
-                    Chart.defaults.font.size='15'
+                    Chart.defaults.font.size='18'
                     
                     
                     $('#myChart').remove();

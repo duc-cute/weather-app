@@ -425,11 +425,13 @@ body {
 }
 
 .content__chart-myChart {
-    width: 520px;
+    width: 440px;
     margin-top: 15px;
+    height: 180px
 }
 .content__chart-myChart canvas {
     width: 100% !important;
+    height: 100% !important;
 }
 .weather__tomorrow {
     position: relative;
