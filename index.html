@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./asset/style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css?fbclid=IwAR3KiX0UeOovH9PGyyaJCVVREdyiN9ewEPqpjRUl4gZIpP590WWTHK6a4eY">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@300;400;500&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="/img/logoRmbg1.gif" alt="">
+                    <span class="logo__text">Dev Weather</span>
+                </div>
+                <ul class="navbar__list">
+                    <li class="navbar__icon">
+                        <i class="icon-select fa-regular fa-chart-column"></i>
+                    </li>
+                    <li class="navbar__icon">
+                        <i class="fa-regular fa-telescope"></i>
+                    </li>
+                    <li class="navbar__icon">
+                        <i class="fa-regular fa-location-dot"></i>
+                    </li>
+                    <li class="navbar__icon">
+                        <i class="fa-regular fa-calendar-days"></i>
+                    </li>
+                    <li class="navbar__icon">
+                        <i class="fa-regular fa-gear"></i>
+                    </li>
+                    <li class="navbar__icon">
+                        <i class="fa-regular fa-house-day"></i>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="content">
+                <div class="content__weather">
+                    <div class="content__info-account">
+                        <div class="account">
+                            <div class="account__avata">
+                                <img src="./img/girl.jpg" alt="">
+                            </div>
+                            <div class="account__name">
+                                <span>Hello,</span>
+                                <span>Crush</span>
+                            </div>
+                        </div>
+                        <div class="tools">
+                            <div class="search">
+                                <input type="text" name="" id="search"  placeholder="Search City...">
+                                <i class="icon-search fa-regular fa-magnifying-glass"></i>
+                            </div>
+                            <i class="icon-notify fa-regular fa-bells"></i>
+                        </div>
+                    </div>
+                    <div class="content__info-day">
+                        <div class="weather__status">
+                            <div class="weather__status-body">
+                                <div class="weather__title">
+                                    <div class="weather__title-icon">
+                                        <i class="fa-regular fa-sun-cloud"></i>
+                                    </div>
+                                    <div class="weather__title-heading">
+                                        <span>Weather</span>
+                                        <span>What's the weather.</span>
+                                    </div>
+                                </div>
+                                <div class="weather__title-temperature mt-24">
+                                    <span class="temperature__value-max weather__title-block ">22 </span>
+                                    <span class="temperature__value-min">22</span>
+                                </div>
+                                <p class="weather__title-short-des">Partly Cloudy</p>
+                                <div class="weather__title-more-des">
+                                    <div class=" status pressure">
+                                        <div class="heading-status">Pressure</div>
+                                        <span>800Mb</span>
+                                    </div>
+                                    <div class=" status visibility">
+                                        <div class="heading-status">Visibility</div>
+                                        <span>4.2 km</span>
+                                    </div>
+                                    <div class=" status humidity">
+                                        <div class="heading-status">Humadidy</div>
+                                        <span>87 %</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weather__wind">
+                            <div class="weather__status-body">
+                                <div class="weather__title">
+                                    <div class="weather__title-icon">
+                                        <i class="fa-regular fa-wind"></i>
+                                    </div>
+                                    <div class="weather__title-heading ">
+                                        <span class="white-color">Wind</span>
+                                        <span class="white-color name__weather-short">Name Wind </span>
+                                    </div>
+                                </div>
+                                <div class="weather__title-wind mt-24">
+                                    <span class="wind__speed-now weather__title-block white-color fz-24">390</span>
+                                </div>
+                                <p class="weather__title-des white-color">West Wind</p>
+                                <div class="clouds__range">
+                                    <div class="clouds__range-block">
+                                        <div class="clouds__range-sliderValue">
+                                            <span>50%</span>
+                                        </div>
+                                        <div class="clouds__range-field">
+                                            <div class="clouds__range-header">Clouds</div>
+                                        </div>
+                                        <div class="input-percent">
+                                            <input type="range" name="" id="clouds__rate" min="0" max="100" value="100" step="1">
+                                            <div class="percent-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content__info-week">
+                        <div class="content__chart">
+                            <div class="content__chart-block">
+                                <div class="content__chart-header">
+                                    <div class="content__chart-heading">How's the temperature today?</div>
+                                    <div class="content__chart-listItem">
+                                        <div class="content__chart-item">
+                                            <i class="fa-regular fa-temperature-list icon-select"></i>
+                                        </div>
+                                        <div class="content__chart-item">
+                                            <i class="fa-regular fa-umbrella"></i>
+                                        </div>
+                                        <div class="content__chart-item">
+                                            <i class="fa-regular fa-wind"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__chart-myChart">
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weather__tomorrow">
+                            <div class="weather__tomorrow-block">
+                                <div class="weather__tomorrow-heading">
+                                    <div class="weather__tomorrow-time">Tomorrow</div>
+                                    <div class="weather__tomorrow-city">Alam Barzah</div>
+                                </div>
+                                <div class="weather__tomorrow-status">
+                                    <span class="weather__tomorrow-temperature">
+                                    </span>
+                                    <div class="weather__tomorrow-des">Rainny</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content__forecast">
+                <div class="content__forecast-block">
+                    <div class="content__header">
+                        <div class="city__position">
+                            <div class="city__status">Sun</div>
+                            <div class="city__name">Ha Noi,VN</div>
+                        </div>
+                        <span class="city__temperature-value">22</span>
+                    </div>
+                    <div class="separate mt-24"></div>
+                    <div class="content__time-sun">
+                        <i class="fa-solid fa-sun-bright"></i>
+                        <div class="content__time-sun-block">
+                            <div class="content__time-sun-bg"></div>
+                        </div>
+                        <input type="range" name="" id="time-sun" min="0" max="100" step="0.1">
+                    </div>
+                    <div class="content__time-des">
+                        <div class="content__time-name ">
+                            <span class="sunrise">Sunrise</span>
+                            <span class="sunset">Sunset</span>
+                        </div>
+                        <div class="content__time-value">
+                            <span class="content__time-value-start">06:45 pm</span>
+                            <span class="content__time-value-end">06:00 am</span>
+                        </div>
+                    </div>
+                    <div class="content__UV">
+                        <div class="content__UV-block">
+                            <div class="content__UV-icon">
+                                <i class="fa-solid fa-sun-bright"></i>
+                            </div>
+                            <div class="content__UV-body">
+                                <div class="content__UV-header">
+                                    <div class="content__UV-value">20 UVI</div>
+                                    <div class="content__UV-shortdes">Moderate</div>
+                                </div>
+                                <div class="content__UV-longdes">Moderate risk of from UV rays</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weather__prediction">
+                        <div class="weather__prediction-heading">Weather Prediction</div>
+                        <div class="weather__prediction-day">
+                            <div class="weather__prediction-icon">
+                                <i class="fa-solid fa-clouds icon-clouds"></i>
+                            </div>
+                            <div class="weather__prediction-status">
+                                <div class="weather__prediction-date">November 10</div>
+                                <div class="weather__prediction-des">
+                                    <span>Cloudy</span>
+                                    <div class="weather__prediction-temperature">26<sup>o</sup> / 16<sup>o</sup>  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weather__prediction-day">
+                            <div class="weather__prediction-icon">
+                                <i class="fa-solid fa-sun-bright icon-sun"></i>
+                            </div>
+                            <div class="weather__prediction-status">
+                                <div class="weather__prediction-date">November 11</div>
+                                <div class="weather__prediction-des">
+                                    <span>Sun</span>
+                                    <div class="weather__prediction-temperature">26<sup>o</sup> / 16<sup>o</sup>  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn__next-day">
+                            <div class="btn__next-day-block">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>Next 5 Days</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/app.js"></script>
+
+</body>
+</html>
