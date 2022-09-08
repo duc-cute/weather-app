@@ -25,7 +25,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right,rgba(0,0,0,0.05),rgba(0,0,0,0.01)),url('/img/weather.png') no-repeat center/cover ;
+    background: linear-gradient(to right,rgba(0,0,0,0.05),rgba(0,0,0,0.01)),url('../img/weather.png') no-repeat center/cover ;
 }
 #app {
     position: relative;
@@ -186,7 +186,7 @@ body {
     margin-top: 36px;
 }
 .weather__status {
-    background-image: url(img/nature4.jpg);
+    background-image: url(../img/nature4.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -314,7 +314,7 @@ body {
 }
 
 .weather__wind {
-    background-image: url(img/kite.jpg);
+    background-image: url(../img/kite.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -435,7 +435,7 @@ body {
     position: relative;
     flex: 1;
     background-color: #ccc;
-    background-image: url(img/person1.jpg);
+    background-image: url(../img/person1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
