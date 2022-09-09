@@ -153,7 +153,6 @@ const app= {
                     for(var i=5;i<=11;i+=2) {
                         var temp=Math.round(dayForecastData.list[i].main.temp - 272.15)
                         list1.push(temp)
-                        console.log(dayForecastData.list[i].dt_txt);
                     }
                     for(var i=3;i<=11;i+=2) {
                         var temp=Math.round(dayForecastData.list[i].main.temp - 272.15)
@@ -275,14 +274,13 @@ const app= {
     },
     handleInput :function() {
         //Input onblur
-        searchInput.onblur=function searchByCity() {
-            // this.renderBySearch()
-            app.renderBySearch()
+        searchInput.onblur = () => {
+            this.renderBySearch()
             searchInput.value=''
         }
         searchInput.addEventListener('keyup',e => {
             if(e.keyCode === 13) {
-            app.renderBySearch()
+            this.renderBySearch()
                 searchInput.value='';
 
             }
