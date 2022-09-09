@@ -71,7 +71,7 @@ const app= {
             })
             .then(dayForecastData => {
                     //Place
-                    const cityName=data.name.trim().replace('Tinh ','');
+                    const cityName=data.name.replace('Tinh ','');
                     place.innerText=`${cityName}, ${data.sys.country}`
                     city.innerText=`${cityName}`
                     //Temperature
@@ -117,6 +117,7 @@ const app= {
                         let dataSunrise=data.sys.sunrise
                         let dataSunset=data.sys.sunset
                         let dataCurrent=data.dt
+                        let currentSlider
                         let valueInput=Math.round((dataCurrent - dataSunrise)/(dataSunset-dataSunrise)*100)
                         if(valueInput >= 0) {
                             inputBg.style.width=`${valueInput}%`
@@ -129,7 +130,7 @@ const app= {
                                 sun.style.left=`${currentSun}%`
                             }
     
-                            let currentSlider=13.66 + (dataCurrent - dataSunrise)/(dataSunset-dataSunrise)*72.675;
+                            currentSlider=13.66 + (dataCurrent - dataSunrise)/(dataSunset-dataSunrise)*72.675;
                             if(currentSlider < 13.66) {
                                 inputTimeSun.value='13.3'
                             }else if(currentSlider > 86) {
@@ -137,10 +138,13 @@ const app= {
                             }else {
                                 inputTimeSun.value=`${currentSlider}`
                             }
-    
+
+                            console.log(dataCurrent - dataSunrise,dataSunset-dataSunrise)
+
+                        
                         }else {
-                            dataCurrent=1;
-                            console.log(valueInput)
+                            inputTimeSun.value='86.7'
+                            inputBg.style.width='100%'
                         }
     
                     }
@@ -231,7 +235,8 @@ const app= {
     handleDayForecast:function(data,i,index) {
         const icons={
              Clouds:`<i class="fa-solid fa-clouds icon-clouds"></i>`,
-             Rain:`<i class="fa-solid fa-cloud-rain icon-rain"></i>`
+             Rain:`<i class="fa-solid fa-cloud-rain icon-rain"></i>`,
+             Clear:`<i class="fa-solid fa-sun-cloud icon-sun"></i>`
         }
         
         const iconName =data.list[i].weather[0].main;
@@ -247,7 +252,7 @@ const app= {
             predictionDayArr[index].querySelector('.weather__prediction-des span').innerText=data.list[i].weather[0].main
             predictionDayArr[index].querySelector('.weather__prediction-icon').innerHTML=icons[iconName];
             predictionDayArr[index].querySelector('.weather__prediction-temperature').innerHTML=`${tempMax} /${tempMin}`;
-
+            console.log(data.list[i].weather[0])
     },
     dayForecast:function(data) {
         var index=0;
