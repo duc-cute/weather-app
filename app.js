@@ -154,14 +154,16 @@ const app= {
                     //Chart
                     const list1=[]
                     const list2=[]
-                    for(var i=5;i<=11;i+=2) {
+                    for(var i=0;i<=6;i+=2) {
                         var temp=Math.round(dayForecastData.list[i].main.temp - 272.15)
                         list1.push(temp)
+                        console.log(dayForecastData.list[i].dt_txt,'list1')
                     }
-                    for(var i=3;i<=11;i+=2) {
+                    for(var i=1;i<=7;i+=2) {
                         var temp=Math.round(dayForecastData.list[i].main.temp - 272.15)
                         list2.push(temp)
                     }
+                    console.log(list1)
                 
                     const labels = [
                         'Morning',
@@ -252,7 +254,6 @@ const app= {
             predictionDayArr[index].querySelector('.weather__prediction-des span').innerText=data.list[i].weather[0].main
             predictionDayArr[index].querySelector('.weather__prediction-icon').innerHTML=icons[iconName];
             predictionDayArr[index].querySelector('.weather__prediction-temperature').innerHTML=`${tempMax} /${tempMin}`;
-            console.log(data.list[i].weather[0])
     },
     dayForecast:function(data) {
         var index=0;
